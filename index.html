@@ -101,7 +101,7 @@
     h1.name strong { font-weight: 700; display: block; }
     .hero-title { font-size: 1.05rem; font-weight: 500; margin-bottom: 0.4rem; }
     .hero-sub { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-    .hero-desc, .about-text, .row-body, .skill-group li, .contact-desc { font-family: var(--font-desc); }
+    .hero-desc, .about-text, .row, .row-head, .row-body, .pub-venue, .pub-authors, .edu-meta, .skill-group li, .contact-desc { font-family: var(--font-desc); }
     .hero-desc { color: var(--muted); max-width: 520px; font-size: 1.02rem; margin-bottom: 2.25rem; }
     .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .btn {
@@ -142,11 +142,11 @@
     .pane.p5 { width: 34%; height: 80%; left: 30%; top: 12%; background: rgba(255,255,255,0.35); backdrop-filter: blur(6px); transform: rotate(-1deg); }
 
     /* ---- SECTIONS ---- */
-    section.block { border-bottom: 1px solid var(--line); padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+    section.block { border-bottom: 1px solid var(--line); padding: clamp(2rem, 4vw, 3.5rem) 0; }
     section.block.soft { background: var(--bg-soft); }
-    .section-head { display: grid; grid-template-columns: 1fr 2.4fr; gap: 3rem; margin-bottom: 3.5rem; }
-    .section-num { font-size: 20px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; font-family: Calibri, sans-serif; font-weight: bold; font-style: italic; }
-    .section-title { font-size: clamp(2rem, 4.2vw, 3.4rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; text-transform: uppercase; }
+    .section-head { display: grid; grid-template-columns: 1fr 2.4fr; gap: 3rem; margin-bottom: 2rem; }
+    .section-num { font-size: 25px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; font-family: Calibri, sans-serif; font-weight: bold; font-style: italic; }
+    .section-title { font-size: clamp(1.5rem, 3.5vw, 2.6rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; text-transform: uppercase; }
     .section-title strong { font-weight: 700; }
 
     /* ---- ABOUT ---- */
@@ -165,9 +165,9 @@
       padding: 2rem 0; border-bottom: 1px solid var(--line-soft);
     }
     .row:last-child { border-bottom: none; }
-    .row-head .role { font-size: 1.05rem; font-weight: 700; line-height: 1.35; margin-bottom: .3rem; }
-    .row-head .org { font-size: 14px; color: var(--accent); font-weight: 500; }
-    .row-head .date { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
+    .row-head .role { font-size: 1.25rem; font-weight: 700; line-height: 1.35; margin-bottom: .3rem; }
+    .row-head .org { font-size: 16px; color: var(--accent); font-weight: 500; }
+    .row-head .date { font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
     .row-body { color: #2b2d36; font-size: .98rem; }
     .row-body li { position: relative; padding-left: 1.3rem; margin-bottom: .55rem; }
     .row-body li::before { content: ''; position: absolute; left: 0; top: .72em; width: 7px; height: 1px; background: var(--accent); }
@@ -175,8 +175,8 @@
     .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
     .tag { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 4px 11px; border: 1px solid var(--accent-light); color: var(--accent-dark); }
     .pub-venue { color: var(--accent); font-weight: 500; font-size: .95rem; margin-bottom: .35rem; }
-    .pub-authors { color: var(--muted); font-size: .92rem; }
-    .award { display: inline-block; margin-top: .6rem; font-size: .9rem; color: var(--ink); background: #fff7cf; border-left: 3px solid #ffcb05; padding: 6px 12px; }
+    .pub-authors { color: var(--muted); font-size: .92rem; } .pub-authors a { color: inherit; text-decoration: underline; }
+    .award { margin-top: .6rem; font-size: .9rem; color: var(--ink); }
     .edu-meta { font-size: .95rem; }
     .edu-meta strong { font-weight: 700; }
 
@@ -296,7 +296,7 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">01 — About</p>
-      <h2 class="section-title">Who I Am</h2>
+      <h2 class="section-title"><strong><Wbr>Who I Am</Wbr></strong></h2>
     </div>
     <div class="about-grid">
       <div class="stats fade-up">
@@ -305,21 +305,19 @@
       </div>
       <div class="about-text fade-up">
         <p>
-          I'm a <strong>manufacturing engineer turned roboticist</strong> — one who's worked across varied domains,
+          I'm a <strong>manufacturing engineer turned roboticist</strong> who has worked across varied domains,
           from automobile assembly lines at <a href="https://www.bajajauto.com/">Bajaj Auto Ltd.</a> and <a href="https://www.mercedes-benz.co.in/">Mercedes-Benz</a>, researching
           aircraft components and 3D printing at <a href="https://www.skyroot.in/">Skyroot Aerospace</a>, to working on
-          communication protocols in robotic systems and using LLMs for zero-shot trajectory generation at the <a href="https://iisc.ac.in/">Indian Institute of Science, Bangalore</a>.
+          communication protocols in robotic systems at <a href="https://iisc.ac.in/">Indian Institute of Science, Bangalore</a>.
         </p>
         <p>
-          My aim lies in giving robots a nervous system — the <strong>ability to understand the world they inhabit</strong> — building
-          machines that perceive, reason, and adapt in real time. I aspire to dive deep into <strong>SLAM, motion planning, robot cognition,
-          and perception</strong> to build autonomous systems that navigate and reason in unstructured environments.
+          My aim lies in giving robots a nervous system - the <strong>ability to understand the world they inhabit</strong> ,building
+          machines that perceive, reason, and adapt in real time. I aspire to dive deep into <strong>SLAM, planning, robot cognition,
+          and perception</strong> to build autonomous systems that navigate and reason in unstructured environments while working harmonisouly alongside humans.
         </p>
         <p>
-          Beyond research and engineering, I've led from the front — as <strong>Secretary of TEDxCOEP</strong>, curating the most talks in the club's history,
-          and as a student representative on the <strong>Board of Studies</strong> shaping the undergraduate curriculum for Manufacturing Science and Engineering at COEP.
-          I believe the same systems thinking that makes a good roboticist makes a good leader:
-          <strong>define the problem, align the team, iterate.</strong>
+          Beyond research and engineering, I've led as <strong>Secretary of TEDxCOEP</strong>, curating the most talks in the club's history,
+          and as a student representative on the <strong>Board of Studies</strong> for Manufacturing Science and Engineering at COEP.
         </p>
         <p>
           In my world parallel with robotics, you can find me writing poems, reflections, musings, exploring nerdy topics (especially astronomy) or dancing!
@@ -334,7 +332,7 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">02 — Experience</p>
-      <h2 class="section-title">Where I've <strong>Worked</strong></h2>
+      <h2 class="section-title"><strong>Where I've Worked</strong></h2>
     </div>
     <div class="rows">
 
@@ -345,8 +343,8 @@
           <div class="date">Feb 2026 – May 2026</div>
         </div>
         <ul class="row-body">
-          <li>Working under the guidance of Prof. Jishnu Keshavan in the Data Augmented Control of Autonomous Systems Lab, my work involves designing and implementing communication protocols for Acrobots and developing algorithms to minimize latency between embedded components to improve real-time control system performance.</li>
-        </ul>
+          <li>Under Dr. Jishnu Keshavan at IISc Bangalore’s Data Augmented Control of Autonomous Systems Lab, designed communication protocols for Acrobots and low-latency algorithms for improving real-time control system performance via RS485 encoder acquisition on Arduino and Raspberry Pi.</li>
+          <li>Developed a Hardware-in-the-Loop (HIL) testing framework on Raspberry Pi, resolving Linux I/O constraints to synchronize 1 Mbps CAN motor control with 2 Mbps RS-485 encoder telemetry.</li>        </ul>
       </div>
 
       <div class="row fade-up">
@@ -356,10 +354,10 @@
           <div class="date">Aug 2024 – Feb 2026</div>
         </div>
         <ul class="row-body">
-          <li>Coordinate teaching for UR5 CB3, Mitsubishi 6CRH, Fanuc M-710iC for sealant &amp; pick-and-place applications</li>
-          <li>Line setup &amp; defect elimination for the world's first CNG motorcycle — Freedom-125</li>
-          <li>Deployment of Mitsubishi robotic manipulator for decal application on petrol tanks</li>
-          <li>Line improvement, quality enhancement, and digitization projects for Vehicle and Engine Assembly</li>
+          <li>Worked on coordinate teaching for UR5 CB3, Mitsubishi 6CRH, Fanuc M-710iC for sealant &amp; pick-and-place applications</li>
+          <li>Worked on overall line & quality improvement with digitization of the Vehicle Assembly at Motorcycle Division (along with the world’s first CNG motorcycle- Freedom 125), achieving an increased Direct Pass Rate from 91% to 93% and managing around 100 operators in engine and vehicle assemblies
+          <li>Competed with a solution combining MaViLa (Manufacturing Vision Language Model), FPGA (Field Programmable Gate Array) and YOLO (segmentation+object detection) for AI-based Part Level Packaging</li>
+          <li>Collaborated with CFTs and stakeholders ensuring timely delivery of respective KPIs and safety & quality audits (ISO 9001 & ISO 45001)</li>
         </ul>
       </div>
 
@@ -384,7 +382,7 @@
         </div>
         <ul class="row-body">
           <li>Investigated FDM 3D printing factors and advanced materials for aerospace components</li>
-          <li>Comparative study of advanced manufacturing processes — under Dr.-Ing C.V.S. Kiran</li>
+          <li>Conducted comparative study of advanced manufacturing processes under the guidance of Dr.-Ing C.V.S. Kiran</li>
         </ul>
       </div>
 
@@ -395,7 +393,7 @@
           <div class="date">May 2023 – Jul 2023</div>
         </div>
         <ul class="row-body">
-          <li>Assisted in GLC 300 plant startup — fault resolution, layout management, automation issues</li>
+          <li>Assisted in GLC 300 plant startup encompassing fault resolution, layout management, automation issues</li>
           <li>Exposure to paint shop automation, body shop systems, and windshield pick-and-place</li>
         </ul>
       </div>
@@ -409,28 +407,28 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">03 — Projects</p>
-      <h2 class="section-title">Things I've <strong>Built</strong></h2>
+      <h2 class="section-title"><strong>Things I've Built</strong></h2>
     </div>
     <div class="rows">
 
       <div class="row fade-up">
-        <div class="row-head"><div class="role">Language Models as Zero-Shot Trajectory Generators</div></div>
+        <div class="row-head"><div class="role">Safe RGB-D Perception Pipeline for Robotic Grasping</div></div>
         <div class="row-body">
-          <p>Mitigating execution failures via hybrid learning — Constraint-Aware Inverse Kinematics, Synchronized Gripper Control, and Perception Feedback. Made the RGB-D camera pipeline robust for smoother, more reliable robot motions.</p>
+          <p>Built a defensive RGB-D perception layer (Python- NumPy, OpenCV, PyBullet) that implements a reliability framework for RGB-D sensor data including automated corruption detection, validated recovery, and gated grasp targets by per-pixel confidence for reliability testing. Verified depth metric conversion against ground truth (0.002 mm mean MAE) and in 200 paired simulated pick trials across 10 corrupted conditions (NaN dropout, pixel dropout, truncated depth, mixed corruption, and blind depth bias), reduced wrong-motion arm executions on bad data from 43% to 17%, with p95 latency of 84.9 ms. Documented an undetectable failure class (plausible-but-wrong depth). Built a simulated pick pipeline in PyBullet including segmentation-based object detection, camera-geometry grasp-point computation, and IK-driven arm execution with 0.5–0.9 cm grasp/motion error.</p>
         </div>
       </div>
 
       <div class="row fade-up">
         <div class="row-head"><div class="role">CFRP + GFRP Integration for Payload Fairing Design</div></div>
         <div class="row-body">
-          <p>Investigated hybrid composite materials for spacecraft payload fairings — targeting cost reduction while maintaining structural integrity. Validated via ANSYS Fluent, structural &amp; modal analysis using layered surface feature for LEO missions.</p>
+          <p>This project investigated the possibility of utilising two different materials, CFRP and GFRP, for the manufacturing of 13m x 5.2m composite payload fairing sandwich structure with an aluminium honeycomb in a spacecraft aiming to reduce cost (CFRP is 5-10 times costlier than GFRP) while maintaining the required strength of payload fairings. Through fluent, structural and modal analysis, evaluated aerodynamic loading at 1000 m/s and 0.4 MPa, with structural loading of 0.03 MPa, and compared results across 250–300 mm mesh sizes. Achieved simulated structural deformations of 0.047–0.06 mm approximately, while analyzing 15 vibration modes to assess resonance characteristics. Used layered surface feature of ANSYS instead of widely used ACT</p>
         </div>
       </div>
 
       <div class="row fade-up">
         <div class="row-head"><div class="role">UV-Based Bone Mineral Density Measurement</div></div>
         <div class="row-body">
-          <p>Prototype device using UV rays, mirrors, diffraction gratings, and photodetectors to compute BMD — a low-cost, non-invasive alternative to DEXA and QUS scans for osteoporosis detection.</p>
+          <p>Developed a prototype device using UV rays, mirrors, diffraction gratings, and photodetectors to compute BMD at a lower cost using non-invasive alternative to DEXA and QUS scans for osteoporosis detection.</p>
         </div>
       </div>
 
@@ -438,13 +436,6 @@
         <div class="row-head"><div class="role">Throat Disease Detection via Infrared Thermography + CNN</div></div>
         <div class="row-body">
           <p>Non-invasive disease detection using a CNN model to identify illness-related temperature anomalies in the throat region through infrared thermographic imaging.</p>
-        </div>
-      </div>
-
-      <div class="row fade-up">
-        <div class="row-head"><div class="role">Gravity Simulator Web App</div></div>
-        <div class="row-body">
-          <p>Interactive web application allowing users to manipulate celestial body mass and orbital distance from the Sun, visualizing resulting trajectory and orbital changes in real time.</p>
         </div>
       </div>
 
@@ -457,35 +448,33 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">04 — Publications</p>
-      <h2 class="section-title">Research <strong>Output</strong></h2>
+      <h2 class="section-title"><strong>Research Output</strong></h2>
     </div>
     <div class="rows">
 
       <div class="row fade-up">
-        <div class="row-head"><div class="role">01</div><div class="org">Springer Nature</div></div>
+        <div class="row-head"><div class="role">01</div><div class="org">Springer Nature</div> <div class="pub-venue">Lecture Notes in Mechanical Engineering, ICMech-REC 2024</div></div>
         <div class="row-body">
           <p><strong>Enhanced Payload Fairing Design: Integrating CFRP and GFRP for Optimal Performance</strong></p>
-          <div class="pub-venue">Lecture Notes in Mechanical Engineering, ICMech 2024</div>
           <div class="pub-authors"><a href="https://link.springer.com/chapter/10.1007/978-981-96-7576-0_26">Shrutee U. et al.</a></div>
-          <div class="award">🏆 Best Paper Award at International Conference on Mechanical Engineering: Researches and Evolutionary Challenges (ICMech REC’24), NIT Warangal</div>
+          <div class="award"><strong>Best Paper Award</strong> at International Conference on Mechanical Engineering: Researches and Evolutionary Challenges (ICMech REC’24), held at NIT Warangal</div>
         </div>
       </div>
 
       <div class="row fade-up">
-        <div class="row-head"><div class="role">02</div><div class="org">ACM — Accepted</div></div>
+        <div class="row-head"><div class="role">02</div><div class="org">ACM (Association for Computing Machinery)</div></div>
         <div class="row-body">
           <p><strong>Advancements in Robotic-Assisted Coronary Artery Bypass Grafting (CABG): A Comprehensive Review</strong></p>
-          <div class="pub-venue">Association for Computing Machinery</div>
-          <div class="pub-authors">Shrutee U. · Presented at AIR (Advances in Robotics) 2025, held by The Robotics Society of India at IIT Jodhpur</div>
+          <div class="pub-authors"><a href="https://dl.acm.org/doi/10.1145/3787370.3787406">SA Upaganlawar</a></div>
+          <div class="award">Presented at AIR (Advances in Robotics) 2025, held by The Robotics Society of India at IIT Jodhpur</div>
         </div>
       </div>
 
       <div class="row fade-up">
-        <div class="row-head"><div class="role">03</div><div class="org">IJSREM</div></div>
+        <div class="row-head"><div class="role">03</div><div class="org">IJSREM</div><div class="pub-venue">International Journal of Scientific Research in Engineering and Management</div></div>
         <div class="row-body">
           <p><strong>A Theoretical Study on the Characteristics of Scramjet</strong></p>
-          <div class="pub-venue">International Journal of Scientific Research in Engineering and Management</div>
-          <div class="pub-authors">Vishnu P. B., Shrutee U.</div>
+          <div class="pub-authors"><a href="https://ijsrem.com/download/a-theoretical-study-on-the-characteristics-of-scramjet">Vishnu P. B, Shrutee U.</a></div>
         </div>
       </div>
 
@@ -498,7 +487,7 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">05 — Education</p>
-      <h2 class="section-title">Academic <strong>Journey</strong></h2>
+      <h2 class="section-title"><strong>Academic Journey</strong></h2>
     </div>
     <div class="rows">
 
@@ -512,9 +501,6 @@
           <p>CGPA: <strong>8.51/10</strong> · Rank: <strong>5 / 68</strong></p>
           <ul>
             <li>Minor in Internet of Things</li>
-            <li>Secretary, TEDx COEP</li>
-            <li>Portfolio Head, COEP Astronomy Club</li>
-            <li>Member, Board of Studies — Dept. of Manufacturing Engineering &amp; Industrial Management</li>
             <li>Silver Honor in International Astronomy and Astrophysics Competition</li>
             <li>Relevant Courses: Robotics &amp; Intelligent Manufacturing, Industrial Automation, CAD/CAM/CAE, Mechatronics, Theory of Machines, Engineering Mathematics, Machine Tool &amp; Manufacturing Systems</li>
           </ul>
@@ -553,19 +539,18 @@
 <section id="skills" class="block soft">
   <div class="wrap">
     <div class="section-head fade-up">
-      <p class="section-num">06 — Skills &amp; Expertise</p>
-      <h2 class="section-title">Tools &amp; <strong>Technologies</strong></h2>
+      <p class="section-num">06 — Skills</p>
+      <h2 class="section-title"><strong>Tools &amp; Technologies</strong></h2>
     </div>
     <div class="skills-grid">
 
       <div class="skill-group fade-up">
         <h3>Programming</h3>
         <ul>
-          <li>ROS2 (Nodes, MoveIt2)</li>
-          <li>Python (NumPy, PyTorch)</li>
+          <li>Python (NumPy, PyTorch, PyBullet, OpenCV, Ultralytics-YOLO)</li>
           <li>MATLAB (Navigation Toolbox)</li>
           <li>Bash</li>
-          <li>R</li>
+          <li>R Programming</li>
           <li>C++</li>
         </ul>
       </div>
@@ -573,12 +558,12 @@
       <div class="skill-group fade-up">
         <h3>Software, Hardware &amp; Design</h3>
         <ul>
+          <li>ROS2 (Nodes, MoveIt2)</li>
           <li>Autodesk Inventor</li>
           <li>ANSYS (Structural, modal, fluid analysis)</li>
           <li>Raspberry Pi and Arduino (Sensor Integration)</li>
           <li>FluidSIM</li>
-          <li>Gazebo</li>
-          <li>GitHub</li>
+          <li>Git</li>
           <li>Figma</li>
         </ul>
       </div>
@@ -602,7 +587,7 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">07 — Others</p>
-      <h2 class="section-title">Beyond the <strong>Lab</strong></h2>
+      <h2 class="section-title"><strong>Beyond the Lab</strong></h2>
     </div>
     <div class="rows">
       <div class="row fade-up">
@@ -614,7 +599,7 @@
       <div class="row fade-up">
         <div class="row-head"><div class="role">Interests</div></div>
         <div class="row-body">
-          <div class="tags" style="margin-top:0"><span class="tag">Bharatnatyam</span><span class="tag">Astronomy</span><span class="tag">TEDx Organizer</span><span class="tag">Poetry</span></div>
+          <div class="tags" style="margin-top:0"><span class="tag">Bharatnatyam</span><span class="tag">Astronomy</span><span class="tag">Poetry</span></div>
         </div>
       </div>
     </div>
@@ -626,7 +611,7 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">08 — Contact</p>
-      <h2 class="section-title">Let's <strong>Connect</strong></h2>
+      <h2 class="section-title"><strong>Let's Connect</strong></h2>
     </div>
     <div class="fade-up">
       <p class="contact-desc">I'm always excited to talk robotics, research collaborations, and ideas at the intersection of autonomy and intelligence. Whether you're a fellow researcher, a recruiter, or just someone who loves robots — my inbox is open.</p>
