@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shrutee Upganlawar | Robotics</title>
   <meta name="description" content="Shrutee Upganlawar — robotics engineer and researcher working on SLAM, navigation, planning, cognition and embodied AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
+      --font-desc: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
       --bg: #ffffff;
       --bg-soft: #f5f6fb;
       --ink: #000000;
@@ -97,6 +101,7 @@
     h1.name strong { font-weight: 700; display: block; }
     .hero-title { font-size: 1.05rem; font-weight: 500; margin-bottom: 0.4rem; }
     .hero-sub { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+    .hero-desc, .about-text, .row-body, .skill-group li, .contact-desc { font-family: var(--font-desc); }
     .hero-desc { color: var(--muted); max-width: 520px; font-size: 1.02rem; margin-bottom: 2.25rem; }
     .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .btn {
@@ -140,7 +145,7 @@
     section.block { border-bottom: 1px solid var(--line); padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
     section.block.soft { background: var(--bg-soft); }
     .section-head { display: grid; grid-template-columns: 1fr 2.4fr; gap: 3rem; margin-bottom: 3.5rem; }
-    .section-num { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
+    .section-num { font-size: 20px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; font-family: Calibri, sans-serif; font-weight: bold; font-style: italic; }
     .section-title { font-size: clamp(2rem, 4.2vw, 3.4rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; text-transform: uppercase; }
     .section-title strong { font-weight: 700; }
 
@@ -262,18 +267,18 @@
 <section id="hero">
   <div class="wrap hero-grid">
     <div class="fade-up">
-      <p class="eyebrow">Robotics Engineer &amp; Researcher</p>
-      <h1 class="name">Shrutee<strong>Upganlawar</strong></h1>
+      <h1 class="name">Shrutee Upganlawar</h1>
+      <!-- <p class="hero-sub"><strong>Robotics Engineer &amp; Researcher</strong></p> -->
       <p class="hero-sub">SLAM · Navigation · Planning · Cognition · Embodied AI</p>
       <p class="hero-desc">From assembly lines to autonomous minds, working and learning to teach the robots to see the world, find their place in it, and move with purpose.</p>
       <div class="btn-row">
         <a href="mailto:upg06shrutee@gmail.com" class="btn btn-solid">Get in Touch</a>
         <a href="https://www.linkedin.com/in/shrutee-upganlawar-8bb33b212/" target="_blank" rel="noopener" class="btn btn-line">LinkedIn</a>
       </div>
-      <dl class="hero-contact">
+      <!-- <dl class="hero-contact">
         <div><dt>Email</dt><dd><a href="mailto:upg06shrutee@gmail.com">upg06shrutee@gmail.com</a></dd></div>
         <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/shrutee-upganlawar-8bb33b212/" target="_blank" rel="noopener">shrutee-upganlawar</a></dd></div>
-      </dl>
+      </dl> -->
     </div>
 
     <div class="glass fade-up" aria-hidden="true">
@@ -291,7 +296,7 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">01 — About</p>
-      <h2 class="section-title">Who I <strong>Am</strong></h2>
+      <h2 class="section-title">Who I Am</h2>
     </div>
     <div class="about-grid">
       <div class="stats fade-up">
@@ -412,7 +417,6 @@
         <div class="row-head"><div class="role">Language Models as Zero-Shot Trajectory Generators</div></div>
         <div class="row-body">
           <p>Mitigating execution failures via hybrid learning — Constraint-Aware Inverse Kinematics, Synchronized Gripper Control, and Perception Feedback. Made the RGB-D camera pipeline robust for smoother, more reliable robot motions.</p>
-          <div class="tags"><span class="tag">LLMs</span><span class="tag">IK</span><span class="tag">Perception</span><span class="tag">Manipulation</span></div>
         </div>
       </div>
 
@@ -420,7 +424,6 @@
         <div class="row-head"><div class="role">CFRP + GFRP Integration for Payload Fairing Design</div></div>
         <div class="row-body">
           <p>Investigated hybrid composite materials for spacecraft payload fairings — targeting cost reduction while maintaining structural integrity. Validated via ANSYS Fluent, structural &amp; modal analysis using layered surface feature for LEO missions.</p>
-          <div class="tags"><span class="tag">Structural, Modal, Fluent Analysis</span></div>
         </div>
       </div>
 
@@ -428,7 +431,6 @@
         <div class="row-head"><div class="role">UV-Based Bone Mineral Density Measurement</div></div>
         <div class="row-body">
           <p>Prototype device using UV rays, mirrors, diffraction gratings, and photodetectors to compute BMD — a low-cost, non-invasive alternative to DEXA and QUS scans for osteoporosis detection.</p>
-          <div class="tags"><span class="tag">Optics</span><span class="tag">Biomedical</span><span class="tag">Prototyping</span><span class="tag">UV Spectroscopy</span></div>
         </div>
       </div>
 
@@ -436,7 +438,6 @@
         <div class="row-head"><div class="role">Throat Disease Detection via Infrared Thermography + CNN</div></div>
         <div class="row-body">
           <p>Non-invasive disease detection using a CNN model to identify illness-related temperature anomalies in the throat region through infrared thermographic imaging.</p>
-          <div class="tags"><span class="tag">CNN</span><span class="tag">Image Processing</span><span class="tag">Thermography</span></div>
         </div>
       </div>
 
@@ -444,7 +445,6 @@
         <div class="row-head"><div class="role">Gravity Simulator Web App</div></div>
         <div class="row-body">
           <p>Interactive web application allowing users to manipulate celestial body mass and orbital distance from the Sun, visualizing resulting trajectory and orbital changes in real time.</p>
-          <div class="tags"><span class="tag">Physics Simulation</span><span class="tag">Orbital Mechanics</span></div>
         </div>
       </div>
 
