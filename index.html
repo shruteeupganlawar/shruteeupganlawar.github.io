@@ -234,7 +234,7 @@
 <!-- HEADER -->
 <header>
   <div class="header-inner">
-    <a href="#hero" class="brand">Shrutee Upganlawar</a>
+    <!-- <a href="#hero" class="brand">Shrutee Upganlawar</a> -->
     <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -243,6 +243,7 @@
         <li><a href="#publications">Publications</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#volunteering">Volunteering</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
@@ -257,6 +258,7 @@
   <a href="#publications">Publications</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
+  <a href="#volunteering">Volunteering</a>
   <a href="#others">Others</a>
   <a href="#contact">Contact</a>
 </div>
@@ -316,7 +318,7 @@
           and perception</strong> to build autonomous systems that navigate and reason in unstructured environments while working harmonisouly alongside humans.
         </p>
         <p>
-          Beyond research and engineering, I've led as <strong>Secretary of TEDxCOEP</strong>, curating the most talks in the club's history,
+          Beyond research and engineering, I've led as <strong>Secretary of TED<sup>x</sup>COEP</strong>, curating the most talks in the club's history,
           and as a student representative on the <strong>Board of Studies</strong> for Manufacturing Science and Engineering at COEP.
         </p>
         <p>
@@ -407,7 +409,10 @@
   <div class="wrap">
     <div class="section-head fade-up">
       <p class="section-num">03 — Projects</p>
-      <h2 class="section-title"><strong>Things I've Built</strong></h2>
+      <div style="display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+        <h2 class="section-title"><strong>Things I've Built</strong></h2>
+        <a class="btn btn-line" href="https://github.com/shruteeupganlawar" target="_blank" rel="noopener">GitHub →</a>
+      </div>
     </div>
     <div class="rows">
 
@@ -582,11 +587,57 @@
   </div>
 </section>
 
-<!-- BEYOND THE LAB -->
-<section class="block">
+<!-- VOLUNTEERING -->
+<section id="volunteering" class="block">
   <div class="wrap">
     <div class="section-head fade-up">
-      <p class="section-num">07 — Others</p>
+      <p class="section-num">07 — Service</p>
+      <h2 class="section-title"><strong>Volunteering</strong></h2>
+    </div>
+    <div class="rows">
+
+      <div class="row fade-up">
+        <div class="row-head">
+          <div class="role">Member of the Board of Studies</div>
+          <div class="org">Department of Manufacturing Engineering and Industrial Management</div>
+          <div class="date">April 2025 – June 2025</div>
+        </div>
+        <div class="row-body">
+          <p>Member in the Board of Studies of the Department of Manufacturing Engineering and Industrial Management, aimed at <strong>devising and formulating the UG curriculum</strong> of B.Tech Manufacturing Science and Engineering.</p>
+        </div>
+      </div>
+
+      <div class="row fade-up">
+        <div class="row-head">
+          <div class="role">Secretary</div>
+          <div class="org">TED<sup>x</sup>COEP</div>
+          <div class="date">Nov 2022 – Nov 2023</div>
+        </div>
+        <div class="row-body">
+          <p>Organised and led the team for the <strong>TED<sup>x</sup> flagship event</strong> and <strong>TED Circles</strong>, inviting speakers from various backgrounds and managing various portfolios including finance, events, web, media and design, curation. Had <strong>8 talks published</strong> (highest in TED<sup>x</sup>COEP's history).</p>
+        </div>
+      </div>
+
+      <div class="row fade-up">
+        <div class="row-head">
+          <div class="role">Portfolio Head</div>
+          <div class="org">COEP Astronomy Club</div>
+          <div class="date">Jun 2022 – Jun 2023</div>
+        </div>
+        <div class="row-body">
+          <p><strong>Organised and led</strong> the team to write various blogs, quizzes, and social media outreach, <strong>researched various astronomical phenomena</strong>, conducted stargazing and telescopic sessions, and spread the knowledge on astronomy.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE LAB -->
+<section class="block soft">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <p class="section-num">08 — Others</p>
       <h2 class="section-title"><strong>Beyond the Lab</strong></h2>
     </div>
     <div class="rows">
@@ -610,7 +661,6 @@
 <section id="contact" class="block">
   <div class="wrap">
     <div class="section-head fade-up">
-      <p class="section-num">08 — Contact</p>
       <h2 class="section-title"><strong>Let's Connect</strong></h2>
     </div>
     <div class="fade-up">
@@ -627,7 +677,6 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <span>© <span id="year">2026</span> Shrutee Upganlawar</span>
     <a href="#hero">Back to top ↑</a>
   </div>
 </footer>
@@ -644,9 +693,6 @@
   }
   hamburger.addEventListener('click', () => setMenu(!drawer.classList.contains('open')));
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-
-  // ---- Footer year ----
-  document.getElementById('year').textContent = new Date().getFullYear();
 
   // ---- Scroll fade-up ----
   const observer = new IntersectionObserver((entries) => {
